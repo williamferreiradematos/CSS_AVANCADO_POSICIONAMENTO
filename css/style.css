@@ -8,7 +8,8 @@ ul {
   padding: 0px;
   margin: 0px;
 }
-
+a {
+}
 body {
   font-family: Georgia, "Times New Roman", Times, serif;
   color: #252525;
@@ -21,5 +22,39 @@ body {
 }
 
 .menu-container {
-  width: 960px;
+  max-width: 960px;
+  margin: 0 auto;
 }
+
+/* Clear-Fix: Utilizado para fazer o ajuste auto do heigth que não estava executando automáticamente por conta dos floats utilizados */
+.menu-container::after,
+.menu-container::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.menu-logo {
+  display: block;
+  float: left;
+  margin-left: 10px;
+}
+
+.menu-nave {
+  float: right;
+  margin-right: 10px;
+}
+
+.menu-nave li {
+  display: inline-block;
+}
+
+.menu-nave a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 1.125em;
+}
+
+/* Fim menu */
